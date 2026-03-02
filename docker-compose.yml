@@ -1,0 +1,8 @@
+# available at http://localhost:8000/nexus
+services:
+  nexus:
+    image: 'sonatype/nexus3:3.89.1-alpine'
+    ports:
+      - "8000:8081"
+    volumes:
+      - "./docker/nexus:/nexus-data" # requires chown -R 200
