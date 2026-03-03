@@ -53,6 +53,10 @@ kotlin {
         }
     }
 
+    linuxX64 {
+        binaries.sharedLib()
+    }
+
     sourceSets {
         commonMain.dependencies {
             implementation(libs.ktor.client.logging)
@@ -85,6 +89,10 @@ kotlin {
 
         jvmTest.dependencies {
             implementation(libs.junit.kotlin)
+        }
+
+        linuxX64Main.dependencies {
+            implementation(libs.ktor.client.curl)
         }
     }
 }
