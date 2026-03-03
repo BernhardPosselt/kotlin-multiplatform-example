@@ -71,8 +71,8 @@ suspend fun main() {
 * Implemented using Coroutines
 * Exported to Promises
 * Benefits over Promises 
-  * no need to await
-  * grouped cancellation: if one operation in a coroutine scope errors, all other operations are canceled
+  * no need to await explicitly
+  * grouped cancellation: if one operation in a coroutine scope errors or is canceled, all other operations on that scope are canceled (including children)
   * Possible in JS with help of [AbortController](https://developer.mozilla.org/de/docs/Web/API/AbortController)
 ---
 ## Promises
